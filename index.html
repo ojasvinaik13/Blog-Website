@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<style type="text/css">
+		html
+		{
+			scroll-behavior: smooth;
+		}
+		nav
+		{
+			font-family: 'Roboto', sans-serif;
+		}
+		.nback
+		{
+			background: #7F7FD5;
+			background: -webkit-linear-gradient(to top, #91EAE4, #86A8E7, #7F7FD5);  
+			background: linear-gradient(to top, #91EAE4, #86A8E7, #7F7FD5); 
+			height:600px;
+			background-attachment: fixed;
+		}
+		.nav-link
+		{
+			color:white;
+		}
+		.nav-link:hover
+		{
+			color:#91EAE4;
+		}
+		.navbar-brand
+		{
+			color:white;
+		}
+		.navbar-brand:hover
+		{
+			color:#91EAE4;
+		}
+		.block
+		{
+			background:white;
+			width:900px;
+			height:550px;
+			z-index:999;
+			border-radius: 5px;
+			margin: auto;	
+			box-shadow:
+					  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+					  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+					  0 12.5px 10px rgba(0, 0, 0, 0.06),
+					  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+					  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+					  0 100px 80px rgba(0, 0, 0, 0.12)
+		}
+		body
+		{
+			overflow-x: hidden;
+		}
+
+		.img1
+		{
+			width:300px;
+			height:500px;
+			padding-top: 40px;
+			padding-left: 20px;
+		}
+		.type
+		{
+			margin-top: 150px;
+			font-size: 50px;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: bold;
+		}
+		.emp
+		{
+			color:#7F7FD5;
+		}
+		.fontc
+		{
+			color:#91EAE4;
+		}
+		#about
+		{
+			margin-top: 300px;
+		}
+		.img2
+		{
+			border-radius: 50%;
+			width:280px;
+			margin-left: 50px;
+			height:300px;
+		}
+		#skills
+		{
+			background-color:#DEF5F5;
+			height: 600px;
+			margin-top: 100px;
+			padding-top: 30px;
+		}
+		.progress
+		{
+			margin:auto;
+			width:60%;
+			height:20px;
+		}
+		.progress-bar
+		{
+			background-color: #7F7FD5;
+		}
+		.sh
+		{
+			position:relative;
+			left:310px;
+			font-weight: bold;
+		}
+		#proj
+		{
+			padding-left:50px;
+		}
+		.ph
+		{
+			color:#7F7FD5;
+			font-family: 'Roboto', sans-serif;
+			font-size: 40px;
+			margin-left: 600px;
+			padding-top: 30px;
+		}
+		.icard
+		{
+			font-size: 36px;
+		}
+		.first
+		{
+			background-color: #59B2AD;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			color:white;
+			text-align: center;
+			height:50px;
+			font-family: 'Roboto', sans-serif; 
+		}
+		.second
+		{
+			height:100px;
+			background-color: #91EAE4;
+			/*padding-left: 580px;*/
+			padding-top: 10px;
+		}
+		.buttons
+		{
+			position: relative;
+			left:41%;
+		}
+		.fa1 
+		{
+		  padding: 13px;
+		  font-size: 30px;
+		  width: 50px;
+		  height:50px;
+		  text-align: center;
+		  text-decoration: none;
+		  margin:5px 5px;
+		  border-radius: 50%;
+		}
+
+		.fa:hover 
+		{
+		   opacity: 0.7;
+		}
+
+		.fa-facebook 
+		{
+		  background: #3B5998;
+		  color: white;
+		}
+		.fa-google 
+		{
+		  background: #dd4b39;
+		  color: white;
+		}
+		.fa-linkedin 
+		{
+		  background: #007bb5;
+		  color: white;
+		}
+		.fa-instagram {
+		  background: #125688;
+		  color: white;
+		}
+		.second a
+		{
+			text-decoration: none;
+		}
+		.fg
+		{
+			font-size:52px;
+			padding-left: 0;
+			padding-top: 5px;
+			color:#2db74c;
+		}
+
+	</style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+	<div class="nback" id="home">
+	<nav class="navbar navbar-expand-md bg-transparent fixed-top" id="sb">
+	  <a id="fc" class="navbar-brand" href="#"><!-- <img src="" class="d-inline-block align-top" style="width:50px;"> --><span style="padding-left:8px;">DS</span></a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+	    <ul class="navbar-nav ml-auto gre">
+	      <li class="nav-item">
+	        <a id="fc" class="nav-link" href="#home">Home</a>
+	      </li>
+	      <li class="nav-item">
+	        <a id="fc" class="nav-link" href="#about">About me</a>
+	      </li>
+	      <li class="nav-item">
+	        <a id="fc" class="nav-link" href="#skills">Skills</a>
+	      </li>
+	      <li class="nav-item">
+	        <a id="fc" class="nav-link" href="#proj">Projects</a>
+	      </li>  
+	    </ul>
+	  </div>  
+	</nav>
+	<br><br><br><br><br><br>
+	<div class="block">
+		<div class="row">
+		<div class="col">
+			<img class="img1" src="d1.jpg">
+		</div>
+		<div class="col type">
+		<div id="typed-strings">
+	  	<p>I am a <span class="emp">Programming Enthusiast.</span></p>
+	  	<p>I am a <span class="emp">CLI Fanatic.</span></p>
+	  	<p>I am a <span class="emp">LINUX supporter.</span></p>
+		</div>
+		<span id="typed"></span>
+		</div>
+		</div>
+
+	</div>
+	</div>
+	<section id="about">
+		<div class="container">
+		<div class="row">
+	    <div class="col">
+	      <img src="d2.jpg" class="img2">
+	    </div>
+	    <div class="col">
+	      <span style="color:#4e4e4c;font-size:50px;font-family: 'Montserrat', sans-serif;">Devansh Shah</span>
+	      <p style="color:#7F7FD5;font-size: 20px;font-family: 'Montserrat', sans-serif;">Student at KJ Somaiya College of Engineering</p>
+	      <p style="color:#4e4e4c;font-size: 20px;">Passionate Learner.<br>Enthusiastic engineering student.<br>Believes in the development of science and technology.</p>
+	    </div>
+	  	</div>
+		</div>
+		
+	</section>
+	<section id="skills">
+		<span style="color:#4e4e4c;margin-left:600px;font-size:40px;font-family: 'Roboto', sans-serif;">My skills</span>
+		<div class="sh">
+			Java
+		</div>
+		<div class="progress">
+		  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 90%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+		</div>
+		<br>
+		<div class="sh">
+			C++
+		</div>
+		<div class="progress">
+		  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 20%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div> 
+		</div>
+		<br>
+		<div class="sh">
+			C
+		</div>
+		<div class="progress">
+		  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 70%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+		</div>
+		<br>
+		<div class="sh">
+			Python
+		</div>
+		<div class="progress">
+		  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 80%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+		</div>
+		
+	</section>
+	<section id="proj">
+		<div class="ph">My Work</div>
+		<br>
+		<div class="row">
+			<div class="col">
+				<div class="card" style="width: 18rem;">
+				  <div class="card-body">
+				    <h5 class="card-title">Attendance Management System using Flask</h5>
+				    <h6 class="card-subtitle mb-2 text-muted">Completed</h6>
+				    <p class="card-text">A website to manage attendance of students in a college.</p>
+				    <a target="_blank" href="https://github.com/devansh2805/Attendance_Management_system_Using_Flask-Python-" class="card-link"><i class="fa fa-github icard"></i></a>
+				  </div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card" style="width: 18rem;">
+				  <div class="card-body">
+				    <h5 class="card-title">Text Editor in Java</h5>
+				    <h6 class="card-subtitle mb-2 text-muted">Completed</h6>
+				    <p class="card-text">A password protected text editor using Java.</p>
+				    <a target="_blank" href="https://github.com/nishit767/QuickEdit-TextEditor-Java" class="card-link"><i class="fa fa-github icard"></i></a>
+				  </div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card" style="width: 18rem;">
+				  <div class="card-body">
+				    <h5 class="card-title">GameHub in Python</h5>
+				    <h6 class="card-subtitle mb-2 text-muted">Completed</h6>
+				    <p class="card-text">A Gaming application with three games using Python.</p>
+				    <a target="_blank" href="https://github.com/Yash4900/GameHub-" class="card-link"><i class="fa fa-github icard"></i></a>
+				  </div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col">
+				<div class="card" style="width: 18rem;">
+				  <div class="card-body">
+				    <h5 class="card-title">Virtual Lab development</h5>
+				    <h6 class="card-subtitle mb-2 text-muted">Ongoing</h6>
+				    <p class="card-text">Development of Virtual Lab for my college.</p>
+				    <a target="_blank" href="https://github.com/devansh2805/Attendance_Management_system_Using_Flask-Python-" class="card-link"><i class="fa fa-github icard"></i></a>
+				  </div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card" style="width: 18rem;">
+				  <div class="card-body">
+				    <h5 class="card-title">Attendance Management Website</h5>
+				    <h6 class="card-subtitle mb-2 text-muted">Completed</h6>
+				    <p class="card-text">A hackathon project.</p>
+				    <a target="_blank" href="https://github.com/devansh2805/Pythonic_lava" class="card-link"><i class="fa fa-github icard"></i></a>
+				  </div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card" style="width: 18rem;">
+				  <div class="card-body">
+				    <h5 class="card-title">Version Control System development</h5>
+				    <h6 class="card-subtitle mb-2 text-muted">Ongoing</h6>
+				    <p class="card-text">Development of a version control system like GIT.</p>
+				    <a target="_blank" href="https://github.com/deepanshu2506/version-control" class="card-link"><i class="fa fa-github icard"></i></a>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<br><br><br><br>
+	<div class="footer second">
+		<div class="buttons">
+		<a target="_blank" href="https://www.facebook.com/devansh.shah.1650"><i class="fa fa1 fa-facebook"></i></a>
+		<a target="_blank" href="dshah2805@gmail.com"><i class="fa fa1 fa-google"></i></a>
+		<a target="_blank" href="https://instagram.com/devansh_2805?igshid=bgczol8wyevv"><i class="fa fa1 fa-instagram"></i></a>
+		<a target="_blank" href="https://www.linkedin.com/in/devansh-shah-0abb34197"><i class="fa fa1 fa-linkedin"></i></a>
+		<a target="_blank" href="https://github.com/devansh2805"><i class="fa1 fg fa fa-github"></i></a>
+		</div>
+	</div>
+	<div class="footer first">
+	©2020 Devansh Shah. All rights reserved.
+	</div>
+	
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@latest/lib/typed.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script>
+  var typed = new Typed('#typed', {
+    stringsElement: '#typed-strings',
+    loop:true,
+    typeSpeed:40,
+    backSpeed:60
+  });
+  var sb = document.getElementById('sb');
+  var fc = document.getElementById('fc');
+	window.onscroll = function () { 
+    "use strict";
+    if (document.body.scrollTop >= 100 || document.documentElement.scrollTop >= 100) {
+        sb.classList.add("bg-white");
+        sb.classList.remove("bg-transparent");
+        sb.classList.add("text-secondary");
+        fc.classList.add("fontc");
+        sb.classList.add("shadow");
+        $(".nav-link").css("color", "#91EAE4"); 
+
+    } 
+    else {
+        sb.classList.add("bg-transparent");
+        sb.classList.remove("bg-white");
+        sb.classList.remove("text-secondary");
+        $(".nav-link").css("color", "white");
+        fc.classList.remove("fontc");
+        sb.classList.remove("shadow");
+    }
+};
+</script>
+</body>
+</html>
