@@ -1,1 +1,2 @@
+process:web
 web: gunicorn deploy:app
